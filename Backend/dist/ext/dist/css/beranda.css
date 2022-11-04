@@ -1,0 +1,125 @@
+body	{
+	background: #f8f8ff;
+	font-family: sans-serif;
+}
+.section-headline h2 {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 70px;
+    position: relative;
+    text-transform: capitalize;
+}
+.section-headline h2::after {
+    border: 1px solid #333;
+    bottom: -20px;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 40%;
+}
+.wrapper	{
+	width: 100%;
+	height: 100%;
+}
+.konten {
+    position: relative;
+    max-height: 100%;
+    margin-bottom: 60px;
+}
+.header {
+	width: 100%;
+	max-width: 100%;
+	margin:0 auto;
+	background: linear-gradient(to right, #f19711, #e7f519);
+	top: 0px;
+	padding: 20px;
+	}
+.tampilanlogo {
+	height: 130px;
+    width: 130px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 4px #afa808;
+}
+.logo {
+	    display: inline-block;
+    float: none;
+    width: 0px;
+        margin-right: 120px;
+}
+.row {
+	text-align: center;
+}
+img.logohead {
+text-align: center;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.7,0.7);
+}
+.footer {
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+	background: linear-gradient(to right, #f1b611, #f5af19);
+	bottom: 0px;
+}
+#center.col-md-3 {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.logokonten {
+    border-radius: 50%;
+    width: 200px;
+    border: 5px solid white;
+    height: 200px;
+    box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, 0.1);
+}
+.logokonten:hover {
+    transition: 1s;
+    transform: rotate(360deg) scale(0.9);
+}
+.tampilanlogo:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+.isifoot {
+	padding: 10px;
+}
+.logofoot {
+	width: 25px;
+	border-radius: 50%;
+	margin-left: 5px;
+}
+#logo.tengah{
+	margin: 0 auto;
+    width: 0px;
+    padding: 10px;
+}
+#logo.kiri{
+	margin: 0 auto;
+    width:100%;
+    padding: 10px;
+}
+#logo.kanan{
+	float: right;
+	padding: 10px;
+    
+}
+
+/*reseponsive mobile*/
+
+/* Pengaturan responsive */
+@media (min-width: 768px){
+	.sidebar	{
+		width: 240px;
+	}
+	.content {	
+		margin-left: 255px;
+		max-width: 100%;
+		margin-right: 15px;
+		margin-top: 15px;
+	}
+}
