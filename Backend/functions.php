@@ -12,7 +12,7 @@ function query($query){
     $result = mysqli_query($conn, $query);
     $rows = [];
     while ($rows = mysqli_fetch_assoc($result)) {
-        $rows[] = $row;
+        $rows[] = $rows;
     }
     return $rows;
 }
