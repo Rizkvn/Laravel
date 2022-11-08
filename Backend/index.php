@@ -1,11 +1,5 @@
 <?php 
-session_start();
-
-if (!isset($_SESSION['login'])){
-	header('location:login.php');
-	exit;
-}
-	require 'function.php';
+	require 'functions.php';
  ?>
 
 <!DOCTYPE html>
@@ -83,7 +77,9 @@ if (!isset($_SESSION['login'])){
 						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
 							<div class="bg-white py-2 collapse-inner rounded">
 								<h6 class="collapse-header">Page :</h6>
-								<a class="collapse-item" href="index.php?page=portal_page">Portal Page</a>
+								<a class="collapse-item" href="index.php?page=user_page">User</a>
+								<a class="collapse-item" href="index.php?page=portofolio_page">Portofolio</a>
+								<a class="collapse-item" href="index.php?page=deskripsi_page">Deskripsi</a>
 							</div>
 						</div>
 					</li>
@@ -211,10 +207,11 @@ if (!isset($_SESSION['login'])){
 							<!-- Content Row -->
 							<div class="row">
 								<?php 
+								error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
+
 								$page = $_GET['page'];
-								if ($page == 'data_user'){
-								 include 'data_user.php';
-								}
+								if ($page == 'user_page'){include 'user_page.php';}
+								elseif (!$page) {include 'Backoffice/dashboard.php';}
 								?>
 							</div>
 							<!-- /.container-fluid -->

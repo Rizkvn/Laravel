@@ -17,6 +17,18 @@ function query($query){
     return $rows;
 }
 
+function tambah_data($data){
+    global $conn;
+    //ambil data dari tiap element form
+    $nama = htmlspecialchars($data["username"]);
+    $pass = htmlspecialchars($data["password"]);
+
+    //query insert data
+    $query = "INSERT INTO user VALUES ('','$nama','$pass')";
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
+
 function user($data){
     global $conn;
     $nama = strtolower(($data["nama"]));

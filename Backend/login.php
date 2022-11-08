@@ -21,8 +21,8 @@ if(isset($_POST['login'])){
   if (mysqli_num_rows($result) === 1 ) {
 
   //cek password
-    $row = mysqli_fetch_assoc($result);
-    if (password_verify($password, $row["password"])) {
+    $rows = mysqli_fetch_assoc($result);
+    if (password_verify($password, $rows["password"])) {
       //set session
       $_SESSION["login"] = true;
 	 // die("valid OK"); 	
